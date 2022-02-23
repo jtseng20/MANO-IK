@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+<robot name="mano_hand_r_tips">
+    <link name="base">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="9.46434e-06" ixy="0.0" ixz="0.0" iyy="1.22209e-05" iyz="-2.49433e-17" izz="1.71183e-05" />
+        </inertial>
+    </link>
+
+    <joint name="base_palm" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="palm" />
+    </joint>
+
+    <link name="palm">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_palm">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/0_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        
+        <visual name="visual_palm">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/0_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="index1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_index1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/1_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_index1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/1_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="index2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_index2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/2_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_index2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/2_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="index3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_index3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/3_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_index3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/3_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="middle1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_middle1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/4_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_middle1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/4_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="middle2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_middle2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/5_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_middle2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/5_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="middle3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_middle3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/6_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_middle3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/6_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="pinky1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_pinky1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/7_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_pinky1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/7_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="pinky2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_pinky2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/8_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_pinky2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/8_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="pinky3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_pinky3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/9_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_pinky3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/9_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="ring1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_ring1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/10_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_ring1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/10_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="ring2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_ring2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/11_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_ring2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/11_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="ring3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_ring3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/12_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_ring3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/12_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="thumb1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+
+        <collision name="collision_thumb1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/13_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_thumb1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/13_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="thumb2">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_thumb2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/14_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_thumb2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/14_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <link name="thumb3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_thumb3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/15_collision.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <visual name="visual_thumb3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right/15_visual.obj" scale="1 1 1" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="palm_index1" type="spherical">
+        <origin xyz="-0.08809725 -0.00520036  0.02068599" rpy="0 0 0" />
+        <parent link="palm" />
+        <child link="index1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="index1_index2" type="spherical">
+        <origin xyz="-0.0326789   0.00400936  0.00221707" rpy="0 0 0" />
+        <parent link="index1" />
+        <child link="index2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="index2_index3" type="spherical">
+        <origin xyz="-0.02215591 -0.00129842 -0.00011412" rpy="0 0 0" />
+        <parent link="index2" />
+        <child link="index3" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="palm_middle1" type="spherical">
+        <origin xyz="-0.09466044 -0.00147896 -0.00335754" rpy="0 0 0" />
+        <parent link="palm" />
+        <child link="middle1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="middle1_middle2" type="spherical">
+        <origin xyz="-0.03118267  0.00186133 -0.00559451" rpy="0 0 0" />
+        <parent link="middle1" />
+        <child link="middle2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="middle2_middle3" type="spherical">
+        <origin xyz="-0.02290464 -0.0012521  -0.00394451" rpy="0 0 0" />
+        <parent link="middle2" />
+        <child link="middle3" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="palm_pinky1" type="spherical">
+        <origin xyz="-0.06878697 -0.00994033 -0.04320934" rpy="0 0 0" />
+        <parent link="palm" />
+        <child link="pinky1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="pinky1_pinky2" type="spherical">
+        <origin xyz="-1.70144081e-02  6.18247168e-05 -1.24987750e-02" rpy="0 0 0" />
+        <parent link="pinky1" />
+        <child link="pinky2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="pinky2_pinky3" type="spherical">
+        <origin xyz="-0.0158669  -0.00069116 -0.01033191" rpy="0 0 0" />
+        <parent link="pinky2" />
+        <child link="pinky3" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="palm_ring1" type="spherical">
+        <origin xyz="-0.08173555 -0.00395742 -0.02667319" rpy="0 0 0" />
+        <parent link="palm" />
+        <child link="ring1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="ring1_ring2" type="spherical">
+        <origin xyz="-0.02831428  0.00206701 -0.00509854" rpy="0 0 0" />
+        <parent link="ring1" />
+        <child link="ring2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="ring2_ring3" type="spherical">
+        <origin xyz="-0.02352051 -0.00168811 -0.00763381" rpy="0 0 0" />
+        <parent link="ring2" />
+        <child link="ring3" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="palm_thumb1" type="spherical">
+        <origin xyz="-0.02408971 -0.01552233  0.02581285" rpy="0 0 0" />
+        <parent link="palm" />
+        <child link="thumb1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="thumb1_thumb2" type="spherical">
+        <origin xyz="-0.01963324  0.00089129  0.02369955" rpy="0 0 0" />
+        <parent link="thumb1" />
+        <child link="thumb2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <joint name="thumb2_thumb3" type="spherical">
+        <origin xyz="-0.02221774 -0.00543297  0.01452412" rpy="0 0 0" />
+        <parent link="thumb2" />
+        <child link="thumb3" />
+        <axis xyz="1 0 0" />
+    </joint>
+    
+    <link name="index_tip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_index_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+        </collision>
+        <visual name="visual_index_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="index3_index_tip" type="fixed">
+        <origin xyz="-0.02221774 0  0" rpy="0 0 0" />
+        <parent link="index3" />
+        <child link="index_tip" />
+        <axis xyz="1 0 0" />
+    </joint>
+    
+    <link name="middle_tip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_middle_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+        </collision>
+        <visual name="visual_middle_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="middle3_middle_tip" type="fixed">
+        <origin xyz="-0.02290464 -0.0012521  -0.00394451" rpy="0 0 0" />
+        <parent link="middle3" />
+        <child link="middle_tip" />
+        <axis xyz="1 0 0" />
+    </joint>
+    
+    <link name="pinky_tip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_pinky_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+        </collision>
+        <visual name="visual_pinky_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="pinky3_pinky_tip" type="fixed">
+        <origin xyz="-0.0158669  -0.00069116 -0.01033191" rpy="0 0 0" />
+        <parent link="pinky3" />
+        <child link="pinky_tip" />
+        <axis xyz="1 0 0" />
+    </joint>
+    
+    <link name="ring_tip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_ring_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+        </collision>
+        <visual name="visual_ring_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ring3_ring_tip" type="fixed">
+        <origin xyz="-0.02352051 -0.00168811 -0.00763381" rpy="0 0 0" />
+        <parent link="ring3" />
+        <child link="ring_tip" />
+        <axis xyz="1 0 0" />
+    </joint>
+    
+    <link name="thumb_tip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.2" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+        <collision name="collision_thumb_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+        </collision>
+        <visual name="visual_thumb_tip">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <sphere radius = "0.005"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="thumb3_thumb_tip" type="fixed">
+        <origin xyz="-0.02221774 -0.00543297  0.01452412" rpy="0 0 0" />
+        <parent link="thumb3" />
+        <child link="thumb_tip" />
+        <axis xyz="1 0 0" />
+    </joint>
+</robot>
